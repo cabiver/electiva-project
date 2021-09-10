@@ -6,9 +6,7 @@ function PrincipalPage () {
     if (response.ok) {
       const jsonRes = await response.json()
       const tex = document.getElementById('h1')
-
-      console.log(tex)
-      tex.innerText = `${tex.innerText + jsonRes.nose}`
+      tex.innerText = `${tex.innerText} ${jsonRes.nose}`
       console.log(jsonRes)
     }
   }
