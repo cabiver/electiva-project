@@ -1,7 +1,7 @@
 const Router = require('express').Router()
 
-Router.post('/', async (req, res) => {
-  res.json({ nose: 'saludos' })
+Router.get('/saludos', async (req, res) => {
+  res.send({ nose: 'saludos' })
 })
 
 module.exports = Router
