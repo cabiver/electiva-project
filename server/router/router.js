@@ -1,6 +1,17 @@
 const Router = require('express').Router()
+const ModelSesion = require('../model/sesiones.js')
 
-Router.get('/saludos', async (req, res) => {
+Router.post('/api/sesiones', async (req, res)=>{
+  let op = req.body
+  const user = await ModelSesion.findOne({usuarios: op})
+  if(!user){
+    res.send({mensaje: "no se ah encontrado el usuario"})
+    return  
+  }
+  res.send()
+})
+
+Router.get('/saludos', (req, res) => {
   res.send({ nose: 'saludos' })
 })
 

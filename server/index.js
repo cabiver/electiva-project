@@ -4,6 +4,7 @@ const app = express()
 
 app.set('port', process.env.port || 3001)
 app.engine('html', require('ejs').renderFile)
+app.use('/', express.static(path.join(__dirname, '/publicServer')))
 app.use(require(path.join(__dirname, 'router/router.js')))
 
 app.listen(app.get('port'), () => {

@@ -5,9 +5,10 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:react/recommended',
-    'standard'
+    'eslint:recommended',
+    'plugin:react/recommended'
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -16,7 +17,8 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react'
+    'react',
+    '@typescript-eslint'
   ],
   rules: {
   }
