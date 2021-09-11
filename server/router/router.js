@@ -8,7 +8,7 @@ Router.post('/api/sesiones', async (req, res)=>{
     res.send({mensaje: "no se ah encontrado el usuario"})
     return  
   }
-  res.send()
+  res.send({mensaje: "se encontro el usuario", user: user})
 })
 
 Router.get('/saludos', (req, res) => {
