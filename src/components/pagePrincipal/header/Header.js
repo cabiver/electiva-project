@@ -1,5 +1,5 @@
 import React from 'react'
-import './headerStyle.css'
+import './headerStyle.scss'
 import VentanaSesion from './VentanaSesion'
 
 function Header () {
@@ -12,8 +12,8 @@ function Header () {
   <>
   <header>
     <nav className='navbar bg-dark bg-gradient heigth-navbar'>
-        <img className='icon-principal' src='images/camille-300x300.png'/>
-        <div onClick={handelClickSesion} className='text-white'>iniciar sesion</div>
+        <img className='icon-principal' src='favicon.ico'/>
+        <div onClick={handelClickSesion} className='text-button-session'>iniciar sesion</div>
     </nav>
     <VentanaSesion/>
   </header>

@@ -34,13 +34,13 @@ function VentanaSesion () {
           <div className='ventana-session__titule'>
             usuario
           </div>
-          <input type='text' name='usuari'></input>
+          <input type='text' name='usuari' className='ventana-session__input'></input>
           <div className='ventana-session__titule'>
             password
           </div>
-          <input type='text' name='password'></input>
+          <input type='password' name='password' className='ventana-session__input'></input>
           <div className='ventana-session__button-container'>
-              <button type='button' onClick={handelRegister} className='ventana-session__buttons'>registrar</button>
+              <button type='button' onClick={handelRegister} className='ventana-session__buttons ventana-session__buttons--margin-right'>registrar</button>
               <button type='button' onClick={handelLogin} className='ventana-session__buttons'>logiar</button>
           </div>
         </form>

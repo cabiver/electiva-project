@@ -8,22 +8,22 @@ Router.post('/api/register', async (req, res)=>{
   console.log(req)
   let op = req.body
   console.log(op)
-  // const user = await ModelSesion.findOne({usuarios: op.usuari})
-  // if(!user){
-  //   const bases = new ModelSesion({
-  //     usuario: op.usuari,
-  //     password: op.password
-  //   })
-  //   const userNew = await bases.save()
-  //   const token = await jwt.sign({ id: userNew._id, usuario: userNew.usuari}, youKnow);
-  //   res.send({
-  //     metodo: true, mensage: "se ha guardado su usuario",
-  //     nombre: userNew.usuari,
-  //     token: token
-  //   });
-  // }
-  // res.send({mensaje: "se encontro el usuario", user: user})
-  res.send({mensaje: "se encontro el usuario"})
+  const user = await ModelSesion.findOne({usuarios: op.usuari})
+  if(!user){
+    const bases = new ModelSesion({
+      usuario: op.usuari,
+      password: op.password
+    })
+    const userNew = await bases.save()
+    const token = await jwt.sign({ id: userNew._id, usuario: userNew.usuari}, youKnow);
+    res.send({
+      metodo: true, mensage: "se ha guardado su usuario",
+      nombre: userNew.usuari,
+      token: token
+    });
+    return
+  }
+  res.send({mensaje: "se encontro el usuario", user: user})
 })
 
 Router.post('/api/sesiones', async (req, res)=>{
