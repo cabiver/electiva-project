@@ -1,0 +1,38 @@
+.hidden{
+    display: none;
+}
+.heigth-navbar {
+    position: absolute;
+    height:12vh;
+}
+.icon-principal {
+    margin-left: 12px;
+    height: 100%;
+    object-fit: scale-down;
+    border: solid 1px #777;
+    border-radius: 50%;
+}
+.ventana-session {
+    padding: 2px 4px 2px 4px;
+    position: absolute;
+    right: 0;
+    border: 2px none #777;
+    border-style: none none solid solid;
+    background-color: aqua;
+    width: 30%;
+}
+.window-session__form-session{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ventana-session__titule {
+    width: fit-content;
+    margin: 0;
+}
+.ventana-session__button-container{
+    margin-top: 6px;
+}
+.ventana-session__buttons{
+    margin-left: 12px;
+}

@@ -1,12 +1,13 @@
 import React from 'react'
 import './App.css'
-import PrincipalPage from './components/PrincipalPage'
-
+import PagePrincipal from'./components/pagePrincipal/PagePrincipal.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App () {
   return (
-    <PrincipalPage/>
+    <>
+    <PagePrincipal/>
+    </>
   )
 }
 
